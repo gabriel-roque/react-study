@@ -1,6 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import FirstComponent from './components/FristComponent';
+import { CompA, CompB } from "./components/MultipleComponents";
+import MultiElements from './components/MultipleElements';
+import Props from './components/UsingProsp';
 
 const element = document.getElementById('root');
 
-ReactDOM.render(<h1>Hello React!</h1>, element);
+ReactDOM.render(
+    <div>
+        <FirstComponent />
+        <Props value="Hello!" />
+
+        <CompA value="I am comp A" />
+        <CompB value="I am comp B" />
+
+        <MultiElements />
+
+    </div>
+    , element);

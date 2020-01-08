@@ -8,6 +8,7 @@ import Family from "./components/Family";
 import Member from "./components/Member";
 import ComponentFunction from "./components/ComponentFunction";
 import ComponentClass from "./components/ComponentByClass";
+import Counter from "./components/Counter";
 
 const App = () => (
   <div>
@@ -29,6 +30,8 @@ const App = () => (
 
     <ComponentClass value="22154" />
     <ComponentClass />
+
+    <Counter number={12} />
   </div>
 );
 export default App;

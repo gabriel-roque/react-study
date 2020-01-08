@@ -7,5 +7,9 @@ export default props => {
     return itens.map(item => <li>{item}</li>);
   };
 
-  return <ul>{makeItens(aproved)}</ul>;
+  return (
+    <div>
+      <ul>{makeItens(aproved)}</ul>
+    </div>
+  );
 };

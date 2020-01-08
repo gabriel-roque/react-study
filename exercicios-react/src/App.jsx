@@ -7,6 +7,7 @@ import Props from "./components/UsingProsp";
 import Family from "./components/Family";
 import Member from "./components/Member";
 import ComponentFunction from "./components/ComponentFunction";
+import ComponentClass from "./components/ComponentByClass";
 
 const App = () => (
   <div>
@@ -25,6 +26,9 @@ const App = () => (
     </Family>
 
     <ComponentFunction />
+
+    <ComponentClass value="22154" />
+    <ComponentClass />
   </div>
 );
 export default App;

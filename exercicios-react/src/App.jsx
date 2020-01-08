@@ -9,6 +9,7 @@ import Member from "./components/Member";
 import ComponentFunction from "./components/ComponentFunction";
 import ComponentClass from "./components/ComponentByClass";
 import Counter from "./components/Counter";
+import CounterHooks from "./components/UsingHooks";
 
 const App = () => (
   <div>
@@ -32,6 +33,8 @@ const App = () => (
     <ComponentClass />
 
     <Counter number={12} />
+
+    <CounterHooks />
   </div>
 );
 export default App;

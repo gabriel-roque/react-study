@@ -6,6 +6,7 @@ import ComponentFunction from "./components/ComponentFunction";
 import ComponentClass from "./components/ComponentByClass";
 import CounterByClass from "./components/CounterByClass";
 import CounterByHooks from "./components/CounterByHooks";
+import UseEffect from "./components/useEffect";
 
 const App = () => (
   <div>
@@ -23,6 +24,8 @@ const App = () => (
     <CounterByClass number={12} />
 
     <CounterByHooks number={12} />
+
+    <UseEffect />
   </div>
 );
 export default App;

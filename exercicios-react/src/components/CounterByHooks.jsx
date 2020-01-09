@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-export default () => {
-  const [count, setCount] = useState(0);
+export default props => {
+  const [count, setCount] = useState(props.number);
   const [status, setStatus] = useState("pair");
 
   useEffect(() => {
@@ -11,11 +11,12 @@ export default () => {
   return (
     <div>
       <hr />
-      <h1>Using React Hooks</h1>
+      <h3>Using React Hooks</h3>
       <h3>
         Cont: {count} | Status: {status}
       </h3>
-      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count + 1)}> + </button>
+      <button onClick={() => setCount(count - 1)}> - </button>
     </div>
   );
 };

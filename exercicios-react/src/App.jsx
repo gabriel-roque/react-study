@@ -1,26 +1,14 @@
 import React from "react";
 
-import FirstComponent from "./components/FristComponent";
-import { CompA, CompB } from "./components/MultipleComponents";
-import MultiElements from "./components/MultipleElements";
-import Props from "./components/UsingProsp";
-import Family from "./components/Family";
-import Member from "./components/Member";
+import Family from "./components/Family/Family";
+import Member from "./components/Family/Member";
 import ComponentFunction from "./components/ComponentFunction";
 import ComponentClass from "./components/ComponentByClass";
-import Counter from "./components/Counter";
-import CounterHooks from "./components/UsingHooks";
+import CounterByClass from "./components/CounterByClass";
+import CounterByHooks from "./components/CounterByHooks";
 
 const App = () => (
   <div>
-    <FirstComponent />
-    <Props value="Hello!" />
-
-    <CompA value="I am comp A" />
-    <CompB value="I am comp B" />
-
-    <MultiElements />
-
     <Family lastname="Roque">
       <Member name="Gabriel" />
       <Member name="Lucas" />
@@ -32,9 +20,9 @@ const App = () => (
     <ComponentClass value="22154" />
     <ComponentClass />
 
-    <Counter number={12} />
+    <CounterByClass number={12} />
 
-    <CounterHooks />
+    <CounterByHooks number={12} />
   </div>
 );
 export default App;

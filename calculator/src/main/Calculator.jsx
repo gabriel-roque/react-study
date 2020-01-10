@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Calculator.css";
 
 import Button from "../components/Button";
 import Display from "../components/Display";
 
-export default () => {
+export default function Calculator() {
   const [displayValue, setDisplayValue] = useState("0");
   const [clearDisplay, setClearDisplay] = useState(false);
   const [operation, setOperation] = useState(null);
@@ -20,17 +20,53 @@ export default () => {
     setCurrent(0);
   };
 
-  const changeOperation = operation => {
-    console.log(operation);
+  useEffect(() => {
+    const newValue = parseFloat(displayValue);
+    let cloneValues = [...values];
+    cloneValues[current] = newValue;
+    setValues(cloneValues);
+
+    // eslint-disable-next-line
+  }, [current, displayValue]);
+
+  const changeOperation = op => {
+    if (current === 0 && op !== "=") {
+      setCurrent(1);
+      setClearDisplay(true);
+      setOperation(op);
+    }
+
+    if (op === "=") {
+      executeOperation(op);
+      setCurrent(0);
+    }
+  };
+
+  const executeOperation = () => {
+    switch (operation) {
+      case "+":
+        setValues([values[0] + values[1], 0]);
+        setDisplayValue(String(values[0] + values[1]));
+        break;
+      case "-":
+        setValues([values[0] - values[1], 0]);
+        setDisplayValue(String(values[0] - values[1]));
+        break;
+      case "*":
+        setValues([values[0] * values[1], 0]);
+        setDisplayValue(String(values[0] * values[1]));
+        break;
+      case "/":
+        setValues([values[0] / values[1], 0]);
+        setDisplayValue(String(values[0] / values[1]));
+        break;
+      default:
+    }
   };
 
   const addDigit = n => {
-    if (n == "." && displayValue.includes(".")) {
+    if (n === "." && displayValue.includes(".")) {
       console.log("have a point");
-      return;
-    }
-
-    if (n == "." && displayValue === "0") {
       return;
     }
 
@@ -38,8 +74,6 @@ export default () => {
     const currentValue = isClearDisplay ? "" : displayValue;
     setDisplayValue(currentValue + n);
     setClearDisplay(false);
-
-    console.log(isClearDisplay, currentValue);
   };
 
   return (
@@ -64,4 +98,4 @@ export default () => {
       <Button label="=" click={() => changeOperation("=")} operation />
     </div>
   );
-};
+}

@@ -1,0 +1,34 @@
+{
+  "name": "react-study",
+  "version": "1.0.0",
+  "description": "react-study",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel-roque/react-study.git"
+  },
+  "keywords": [],
+  "author": "gabriel-roque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriel-roque/react-study/issues"
+  },
+  "homepage": "https://github.com/gabriel-roque/react-study#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^4.0.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

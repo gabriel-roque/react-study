@@ -1,6 +1,6 @@
 import React from "react";
 
-import PagaHeader from "../../../../components/PageHeader";
+import PagaHeader from "components/PageHeader";
 
 export default function About() {
   return (

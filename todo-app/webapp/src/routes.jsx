@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
-import RoutesCore from "./modules/core/routes";
+import RoutesCore from "modules/core/routes";
 
 const routes = [...RoutesCore];
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-import RouterView from "../routes";
+import RouterView from "routes";
 
 export default function Menu() {
   return (

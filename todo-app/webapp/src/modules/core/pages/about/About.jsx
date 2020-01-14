@@ -1,8 +1,8 @@
 import React from "react";
 
-import PagaHeader from "../template/PageHeader";
+import PagaHeader from "../../../../components/PageHeader";
 
-export default function About(props) {
+export default function About() {
   return (
     <div>
       <div>

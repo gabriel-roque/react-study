@@ -1,14 +1,19 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
-import Todo from "./todo/Todo";
-import About from "./about/About";
+import RoutesCore from "./modules/core/routes";
+
+const routes = [...RoutesCore];
 
 export default function Routes() {
+  const makeRoutes = () =>
+    routes.map((e, i) => (
+      <Route key={i} path={e.path} component={e.component} />
+    ));
+
   return (
     <React.Fragment>
-      <Route path="/todos" component={Todo} />
-      <Route path="/about" component={About} />
+      {makeRoutes()}
       <Route path="*">
         <Redirect to="/todos" />
       </Route>

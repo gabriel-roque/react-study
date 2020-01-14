@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import PagaHeader from "../template/PageHeader";
+import PagaHeader from "../../../../components/PageHeader";
 
 export default class Todo extends Component {
   render() {

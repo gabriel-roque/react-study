@@ -1,7 +1,13 @@
 import Todo from "./pages/todo/Todo";
 import About from "./pages/about/About";
+import Home from "./pages/home/Home";
 
 const routesCore = [
+  {
+    path: "/",
+    component: Home,
+    label: "Home"
+  },
   {
     path: "/todos",
     component: Todo,

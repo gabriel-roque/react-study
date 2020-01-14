@@ -8,7 +8,7 @@ const routes = [...RoutesCore];
 export default function Routes() {
   const makeRoutes = () =>
     routes.map((e, i) => (
-      <Route key={i} path={e.path} component={e.component} />
+      <Route key={i} exact path={e.path} component={e.component} />
     ));
 
   return (

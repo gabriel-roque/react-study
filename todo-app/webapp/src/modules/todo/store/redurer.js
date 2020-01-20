@@ -18,6 +18,11 @@ export default (state = INITIAL_STATE, action) => {
     case types.INITIAL_TASKS:
       return { ...state, tasks: [...action.tasks] };
 
+    case types.ADD_TASK:
+      let tasks = [...state.tasks];
+      tasks.push(action.task);
+      return { ...state, tasks };
+
     default:
       return state;
   }

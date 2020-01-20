@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
-export default function TodoForm() {
+import { connect } from "react-redux";
+import * as TodoActions from "modules/todo/store/actions";
+
+function TodoForm({ addTask }) {
   const [task, setTask] = useState("");
 
   function submitForm(e) {
     e.preventDefault();
-
-    console.log(task);
+    let data = { description: task, completed: false };
+    addTask(data);
   }
 
   return (
@@ -35,3 +38,9 @@ export default function TodoForm() {
     </form>
   );
 }
+
+const mapDispatchToProps = dispatch => ({
+  addTask: task => dispatch(TodoActions.addTask(task))
+});
+
+export default connect(null, mapDispatchToProps)(TodoForm);

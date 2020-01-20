@@ -11,6 +11,14 @@ export const initialTasks = () => {
   };
 };
 
+export const addTask = task => {
+  return dispath => {
+    apiTodo.post("/todos", task).then(resp => {
+      dispath({ type: types.ADD_TASK, task: resp.data.todo });
+    });
+  };
+};
+
 export const completeTask = task => {
   return {
     type: types.COMPLETE_TASK,

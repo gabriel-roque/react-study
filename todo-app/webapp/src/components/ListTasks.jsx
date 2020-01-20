@@ -1,9 +1,9 @@
 import React from "react";
 
 import { connect } from "react-redux";
-import { completeTask } from "../modules/core/store/actions";
+import * as TodoActions from "modules/core/store/actions";
 
-function ListTasks({ tasks, dispatch }) {
+function ListTasks({ tasks, completeTask }) {
   return (
     <div>
       <ul>
@@ -15,9 +15,7 @@ function ListTasks({ tasks, dispatch }) {
               <i className="fa fa-times mr-2" />
             )}
             {task.desc}
-            <button onClick={() => dispatch(completeTask(task))}>
-              Complete
-            </button>
+            <button onClick={() => completeTask(task)}>Complete</button>
           </li>
         ))}
       </ul>
@@ -25,4 +23,12 @@ function ListTasks({ tasks, dispatch }) {
   );
 }
 
-export default connect(state => ({ tasks: state.tasks }))(ListTasks);
+const mapStateToProps = state => ({
+  tasks: state.tasks
+});
+
+const mapDispatchToProps = dispatch => ({
+  completeTask: task => dispatch(TodoActions.completeTask(task))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListTasks);

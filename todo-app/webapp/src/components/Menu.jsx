@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Menu() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-animate navbar-material">
       <Link className="navbar-brand" to="/">
         <i className="fas fa-calendar-week"></i> TodoApp
       </Link>

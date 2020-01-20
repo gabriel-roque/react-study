@@ -1,0 +1,22 @@
+@keyframes navbar {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar-animate {
+  animation: navbar 0.75s forwards 0s ease;
+}
+
+.navbar-material {
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: rgba(0, 12, 32, 0.04) 0 0 1px 0,
+    rgba(10, 31, 68, 0.06) 0 10px 16px 0;
+  flex-direction: row;
+  margin: 0.25rem 0.5em;
+}

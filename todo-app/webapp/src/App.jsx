@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.css";
+import "assets/global.css";
 
 import React from "react";
 import Menu from "components/Menu";
@@ -10,7 +11,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 // React Redux
 import { Provider } from "react-redux";
-import store from "./modules/core/store/index";
+import store from "store";
 
 export default function App() {
   return (

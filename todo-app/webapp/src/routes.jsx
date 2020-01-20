@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
-import RoutesCore from "modules/core/routes";
+import routesTodo from "modules/todo/routes";
+import routesChat from "modules/chat/routes";
 
-const routes = [...RoutesCore];
+const routes = [...routesTodo, ...routesChat];
 
 export default function Routes() {
   const makeRoutes = () =>

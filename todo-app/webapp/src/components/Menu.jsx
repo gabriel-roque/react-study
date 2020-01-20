@@ -27,6 +27,9 @@ export default function Menu() {
           <Link className="nav-item nav-link" to="/about">
             About
           </Link>
+          <Link className="nav-item nav-link" to="/chat">
+            Chat
+          </Link>
         </div>
       </div>
     </nav>

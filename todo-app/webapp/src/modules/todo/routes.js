@@ -2,7 +2,7 @@ import Todo from "./pages/todo/Todo";
 import About from "./pages/about/About";
 import Home from "./pages/home/Home";
 
-const routesCore = [
+const routesTodo = [
   {
     path: "/",
     component: Home,
@@ -20,4 +20,4 @@ const routesCore = [
   }
 ];
 
-export default routesCore;
+export default routesTodo;

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { connect } from "react-redux";
-import * as TodoActions from "modules/core/store/actions";
+import * as TodoActions from "modules/todo/store/actions";
 
 function ListTasks({ tasks, completeTask }) {
   return (
@@ -24,7 +24,7 @@ function ListTasks({ tasks, completeTask }) {
 }
 
 const mapStateToProps = state => ({
-  tasks: state.tasks
+  tasks: state.todo.tasks
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -10,6 +10,7 @@ function TodoForm({ addTask }) {
     e.preventDefault();
     let data = { description: task, completed: false };
     addTask(data);
+    setTask("");
   }
 
   return (
@@ -22,6 +23,7 @@ function TodoForm({ addTask }) {
               type="text"
               id="todo"
               className="form-control"
+              value={task}
               onChange={e => setTask(e.target.value)}
             />
           </div>
